@@ -1,0 +1,19 @@
+package com.musicbox.dao;
+
+import com.musicbox.model.Album;
+import com.musicbox.model.Track;
+
+import java.util.List;
+
+public interface AlbumDao {
+
+    void addAlbum(Album album);
+
+    void removeById(Long id);
+
+    Album getById(Long id);
+
+    List<Album> getAll();
+
+    List<Track> getTracksByAlbumId(Long id);
+}
