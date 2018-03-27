@@ -21,7 +21,12 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     public void removeById(Long id) {
+        albumDao.removeById(id);
+    }
 
+    @Override
+    public void removeCoverById(Long id) {
+        albumDao.removeCoverById(id);
     }
 
     @Override

@@ -1,40 +1,28 @@
 import React from 'react';
+import {Route, Link, Switch} from 'react-router-dom';
+import Home from './Home';
 
 
-class Api extends React.Component{
 
-    constructor(anyparams){
-        super(anyparams)
 
-        this.state = {
-            albums: []
-        }
-        this.getAlbums();
-
-    }
-    getAlbums (){
-        var self = this;
-        var request = new window.XMLHttpRequest();
-        request.open('GET', 'http://localhost:8080/api/albums/get-all', true);
-        request.onload = function() {
-            self.setState({ albums:JSON.parse(request.responseText)});
-
-        }
-        request.send();
-    }
-
-    render(){
-        var self = this;
-        console.log(this.state.albums)
-
+class App extends React.Component {
+    render() {
 
         return (
             <div>
-                rabotaet
+                <header>
+                    <Link to="/">Home </Link>
+
+                </header>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                </Switch>
             </div>
-        )
+        );
     }
 }
 
 
-export default Api;
+
+export default App;
+

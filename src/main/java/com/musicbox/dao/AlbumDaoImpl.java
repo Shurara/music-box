@@ -25,8 +25,19 @@ public class AlbumDaoImpl implements AlbumDao {
     }
 
     @Override
+    @Transactional
     public void removeById(Long id) {
+        Album album = entityManager.find(Album.class, id);
+        entityManager.remove(album);
 
+    }
+
+    @Override
+    public void removeCoverById(Long id) {
+        String sql = "UPDATE ALBUMS SET COVER = null WHERE ALBUM_ID IN(" + id + ")";
+
+        Query query = entityManager.createNativeQuery(sql, Album.class);
+        query.executeUpdate();
     }
 
     @Override

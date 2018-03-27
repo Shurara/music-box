@@ -12,6 +12,8 @@ public interface AlbumDao {
 
     void removeById(Long id);
 
+    void removeCoverById(Long id);
+
     Album getById(Long id);
 
     List<Album> getAll();

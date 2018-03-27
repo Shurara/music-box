@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 @RestController
 @RequestMapping("/api/albums")
@@ -30,5 +31,19 @@ public class AlbumController {
     public Album getById(@PathVariable Long id){
 
         return albumService.getById(id);
+    }
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    @CrossOrigin(value = "http://localhost:3000")
+    public String removeById(@PathVariable Long id) {
+        albumService.removeById(id);
+        return "redirect:/get-all";
+    }
+    @RequestMapping(path = "/{id}/cover", method = RequestMethod.PUT)
+    @ResponseBody
+    @CrossOrigin(value = "http://localhost:3000")
+    public String removeCoverById(@PathVariable Long id) {
+        albumService.removeCoverById(id);
+        return "redirect:/get-all";
     }
 }
