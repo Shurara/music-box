@@ -12,12 +12,12 @@ public class Album {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long album_id;
     @Column(name = "TITLE")
     private String title;
     @Column(name = "COVER")
     private String cover;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "album", orphanRemoval = true)
     private List<Track> tracks = new ArrayList<>();
 
     public List<Track> getTracks() {
@@ -29,11 +29,11 @@ public class Album {
     }
 
     public Long getId() {
-        return id;
+        return album_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.album_id = album_id;
     }
 
     public String getTitle() {

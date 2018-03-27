@@ -10,16 +10,16 @@ import javax.persistence.Table;
 public class Role {
     @Id
     @Column(name = "ID_ROLE")
-    private Long id;
+    private Long id_role;
     @Column(name = "ROLE")
     private String role;
 
     public Long getId() {
-        return id;
+        return id_role;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.id_role = id_role;
     }
 
     public String getRole() {

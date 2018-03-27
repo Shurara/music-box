@@ -12,15 +12,15 @@ public class Track {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long track_id;
     @Column(name = "TITLE")
     private String title;
     @Column(name = "URL")
     private String url;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALBUM_ID")
     private Album album;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "track")
     private List<Like> likes = new ArrayList<>();
 
     public List<Like> getLikes() {
@@ -29,10 +29,6 @@ public class Track {
 
     public void setLikes(List<Like> likes) {
         this.likes = likes;
-    }
-
-    public Album getAlbum() {
-        return album;
     }
 
     public void setAlbum(Album album) {
@@ -50,11 +46,11 @@ public class Track {
     public Track(){}
 
     public Long getId() {
-        return id;
+        return track_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.track_id = track_id;
     }
 
     public String getTitle() {

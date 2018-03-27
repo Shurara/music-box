@@ -26,7 +26,7 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     public Album getById(Long id) {
-        return null;
+        return albumDao.getById(id);
     }
 
     @Override

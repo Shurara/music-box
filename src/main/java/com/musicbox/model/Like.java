@@ -8,24 +8,16 @@ public class Like {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @ManyToOne
+    private Long like_id;
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SONG_ID")
     private Track track;
 
-    public Track getTrack() {
-        return track;
-    }
-
     public void setTrack(Track track) {
         this.track = track;
-    }
-
-    public User getUser() {
-        return user;
     }
 
     public void setUser(User user) {
@@ -33,10 +25,10 @@ public class Like {
     }
 
     public Long getId() {
-        return id;
+        return like_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.like_id = like_id;
     }
 }

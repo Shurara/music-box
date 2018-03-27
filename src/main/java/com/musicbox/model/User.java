@@ -12,7 +12,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long user_id;
     @Column(name = "ROLE_ID")
     private Long role;
     @Column(name = "NAME")
@@ -21,7 +21,7 @@ public class User {
     private String login;
     @Column(name = "PASSWORD")
     private String password;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user")
     private List<Like> likes = new ArrayList<>();
 
     public List<Like> getLikes() {
@@ -33,11 +33,11 @@ public class User {
     }
 
     public Long getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.user_id = user_id;
     }
 
     public Long getRole() {
