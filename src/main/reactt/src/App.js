@@ -11,11 +11,11 @@ class App extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">Home </Link>
+                    <Link to="/home">Home </Link>
 
                 </header>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/home" component={Home}/>
                 </Switch>
             </div>
         );

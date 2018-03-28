@@ -3,7 +3,7 @@ package com.musicbox.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "LIKES")
+@Table(name = "likes")
 public class Like {
 
     @Id

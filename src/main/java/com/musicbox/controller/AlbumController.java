@@ -19,7 +19,7 @@ public class AlbumController {
     @Autowired
     private AlbumService albumService;
 
-    @RequestMapping(path = "/get-all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(path = "/get-all", method = RequestMethod.GET)
     @ResponseBody
     @CrossOrigin(value = "http://localhost:3000")
     public List<Album> getAll() {

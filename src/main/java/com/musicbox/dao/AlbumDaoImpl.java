@@ -34,7 +34,7 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public void removeCoverById(Long id) {
-        String sql = "UPDATE ALBUMS SET COVER = null WHERE ALBUM_ID IN(" + id + ")";
+        String sql = "UPDATE albums SET COVER = null WHERE ALBUM_ID IN(" + id + ")";
 
         Query query = entityManager.createNativeQuery(sql, Album.class);
         query.executeUpdate();
@@ -42,7 +42,7 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public Album getById(Long id) {
-        String sql = "SELECT * FROM ALBUMS WHERE ALBUM_ID IN(" + id + ")";
+        String sql = "SELECT * FROM albums WHERE ALBUM_ID IN(" + id + ")";
 
         Query query = entityManager.createNativeQuery(sql, Album.class);
         Album album = (Album) query.getSingleResult();
@@ -53,7 +53,9 @@ public class AlbumDaoImpl implements AlbumDao {
     @Override
     public List<Album> getAll() {
 
-        return entityManager.createNativeQuery("SELECT * FROM ALBUMS").getResultList();
+        Query query = entityManager.createNativeQuery("SELECT * FROM albums", Album.class);
+        List<Album> list = (List<Album>) query.getResultList();
+        return list;
     }
 
     @Override
