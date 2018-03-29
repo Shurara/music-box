@@ -2,6 +2,7 @@ package com.musicbox.service;
 
 import com.musicbox.model.Album;
 import com.musicbox.model.Track;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -18,4 +19,8 @@ public interface AlbumService {
     List<Album> getAll();
 
     List<Track> getTracksByAlbumId(Long id);
+
+    static String testError() {
+        throw new RuntimeException();
+    }
 }

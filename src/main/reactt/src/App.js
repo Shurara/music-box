@@ -15,7 +15,7 @@ class App extends React.Component {
 
                 </header>
                 <Switch>
-                    <Route exact path="/home" component={Home}/>
+                    <Route path="/home" component={Home}/>
                 </Switch>
             </div>
         );
@@ -25,4 +25,5 @@ class App extends React.Component {
 
 
 export default App;
+
 

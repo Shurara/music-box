@@ -19,12 +19,16 @@ public class AlbumController {
     @Autowired
     private AlbumService albumService;
 
+
+
     @RequestMapping(path = "/get-all", method = RequestMethod.GET)
     @ResponseBody
     @CrossOrigin(value = "http://localhost:3000")
     public List<Album> getAll() {
+
         return albumService.getAll();
     }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     @CrossOrigin(value = "http://localhost:3000")
@@ -32,18 +36,28 @@ public class AlbumController {
 
         return albumService.getById(id);
     }
+
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     @ResponseBody
     @CrossOrigin(value = "http://localhost:3000")
     public String removeById(@PathVariable Long id) {
+
         albumService.removeById(id);
         return "redirect:/get-all";
     }
+
     @RequestMapping(path = "/{id}/cover", method = RequestMethod.PUT)
     @ResponseBody
     @CrossOrigin(value = "http://localhost:3000")
     public String removeCoverById(@PathVariable Long id) {
+
         albumService.removeCoverById(id);
         return "redirect:/get-all";
+    }
+
+    @RequestMapping(value = "/error", method = RequestMethod.GET)
+    public ResponseEntity<String> testError() {
+
+        return new ResponseEntity<>(AlbumService.testError(), HttpStatus.OK);
     }
 }

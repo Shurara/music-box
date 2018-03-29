@@ -888,23 +888,23 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="223" parent="2" name="ALBUMS">
+    <table id="223" parent="2" name="albums">
       <Engine>InnoDB</Engine>
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <table id="224" parent="2" name="LIKES">
+    <table id="224" parent="2" name="likes">
       <Engine>InnoDB</Engine>
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <table id="225" parent="2" name="ROLES">
+    <table id="225" parent="2" name="roles">
       <Engine>InnoDB</Engine>
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <table id="226" parent="2" name="TRACKS">
+    <table id="226" parent="2" name="tracks">
       <Engine>InnoDB</Engine>
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <table id="227" parent="2" name="USERS">
+    <table id="227" parent="2" name="users">
       <Engine>InnoDB</Engine>
       <Collation>latin1_swedish_ci</Collation>
     </table>
@@ -985,7 +985,7 @@
     <foreign-key id="243" parent="224" name="USER_ID_FK">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>go2holid_musbox</RefSchemaName>
-      <RefTableName>USERS</RefTableName>
+      <RefTableName>users</RefTableName>
       <RefColNames>USER_ID</RefColNames>
     </foreign-key>
     <column id="244" parent="225" name="ID_ROLE">

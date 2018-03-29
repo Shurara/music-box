@@ -1,5 +1,7 @@
 package com.musicbox.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,6 +22,7 @@ public class Track {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALBUM_ID")
     private Album album;
+
     @OneToMany(mappedBy = "track")
     private List<Like> likes = new ArrayList<>();
 
