@@ -19,6 +19,7 @@ class AlbumList extends React.Component {
         var self = this;
         var request = new window.XMLHttpRequest();
         request.open('GET', 'http://localhost:8080/api/albums/get-all', true);
+        // request.open('GET', '/api/albums/get-all', true);
         request.onload = function() {
             self.setState({albums:JSON.parse(request.responseText)});
 
@@ -31,7 +32,7 @@ class AlbumList extends React.Component {
 
     render() {
         const albums = this.state.albums.map(album =>
-            <div className="album">
+            <div key={album.id} className="album">
             <header>{album.title}</header>
             <img onClick={() => this.redirectToTarget(album.id)} className="album__cover" src={album.cover}/>
         </div>)

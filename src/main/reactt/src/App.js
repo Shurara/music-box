@@ -1,11 +1,12 @@
 import React from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Navigation from "./components/Navigation"
 import SoundPlayer from "./components/SoundPlayer"
 import AlbumList from "./components/AlbumList";
-import FavoriteAlbums from "./containers/FavoriteTracksBox";
-import Login from "./containers/LoginBox";
+import FavoriteTrackBox from "./containers/FavoriteTracksBox";
+import LoginBox from "./containers/LoginBox";
 import TrackList from "./components/TrackList"
+import AdminBox from "./containers/AdminBox"
 
 
 
@@ -19,9 +20,11 @@ class App extends React.Component {
               <Switch>
                   <Route exact path = "/" component ={AlbumList}/>
                   <Route exact path = "/albums/:id" component ={TrackList}/>
-                  <Route exact path = "/favorites" component ={FavoriteAlbums}/>
+                  <Route exact path = "/favorites" component ={FavoriteTrackBox}/>
                   <Route exact path = "/albums" component ={AlbumList}/>
-                  <Route exact path = "/login" component ={Login}/>
+                  <Route exact path = "/login" component ={LoginBox}/>
+                  <Route exact path = "/tracklist" component ={TrackList}/>
+                  <Route exact path="/adminbox" component ={AdminBox}/>
               </Switch>
           </div>
 
