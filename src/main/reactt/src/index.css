@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
 .home {
   album: pointer;
 }
@@ -11,4 +12,7 @@ body {
   cursor: pointer;
   height: 250px;
   width: 250px;
+}
+a{
+  margin-right: 10px;
 }
