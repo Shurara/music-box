@@ -8,18 +8,27 @@ import java.util.List;
 
 public interface TrackService {
 
+    List<Track> getAll(); //GET /api/tracks
 
-    void addTrack(Track track);
+    Track getById(Long id);//GET /api/tracks/{id}
 
-    void removeById(Long id);
+    void addTracks(Track track);//POST /api/tracks/{id}
 
-    void removeCoverById(Long id);
+    void updateTracksById (Track track);//PUT /api/tracks/{id}
 
-    Track getById(Long id);
+    void removeTrackById(Long id); //DELETE /api/tracks/{id}
 
-    List<Track> getAll();
+    List<Track> getAllLikedTracks();//    3.7 GET /api/tracks?liked=true
 
-    List<Track> getTracksByAlbumId(Long id);
+//    3.6 POST /api/tracks/{id}/like
+
+//    3.8 POST /api/tracks/{id}/song mp3 upload.
+
+
+
+
+
+
 
     static String testError() {
         throw new RuntimeException();
