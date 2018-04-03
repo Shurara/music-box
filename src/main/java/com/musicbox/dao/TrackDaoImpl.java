@@ -2,12 +2,19 @@ package com.musicbox.dao;
 
 import com.musicbox.model.Like;
 import com.musicbox.model.Track;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
 public class TrackDaoImpl implements TrackDao {
+
+    @Autowired
+    EntityManager entityManager;
+
     @Override
     public void addTrack(Track track) {
 
@@ -20,16 +27,21 @@ public class TrackDaoImpl implements TrackDao {
 
     @Override
     public Track getById(Long id) {
+
         return null;
     }
 
     @Override
     public List<Track> getAll() {
-        return null;
+        String sql = "SELECT  * FROM tracks";
+        Query query = entityManager.createNativeQuery(sql, Track.class);
+        List<Track> tracks = (List<Track>)query.getResultList();
+        return tracks;
     }
 
     @Override
     public List<Like> getLikesByTrackId(Long id) {
+
         return null;
     }
 }

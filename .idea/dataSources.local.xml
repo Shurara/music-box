@@ -12,7 +12,7 @@
       <introspection-schemas>*:MusicBox</introspection-schemas>
     </data-source>
     <data-source name="go2holid_musbox@go2holid.mysql.ukraine.com.ua" uuid="83d196a5-c433-4982-9d65-b6ef8c61e07e">
-      <database-info product="MySQL" version="5.6.27-75.0-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+      <database-info product="MySQL" version="5.6.27-75.0-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

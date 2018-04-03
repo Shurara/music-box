@@ -16,6 +16,8 @@ public class TrackController {
   @Autowired
   private TrackService trackService;
 
+
+
   @RequestMapping(path = "/get-all", method = RequestMethod.GET)
   @ResponseBody
   @CrossOrigin(value = "http://localhost:3000")
@@ -32,14 +34,14 @@ public class TrackController {
     return trackService.getById(id);
   }
 
-  @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
-  @ResponseBody
-  @CrossOrigin(value = "http://localhost:3000")
-  public String removeById(@PathVariable Long id) {
-
-    trackService.removeById(id);
-    return "redirect:/get-all";
-  }
+//  @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+//  @ResponseBody
+//  @CrossOrigin(value = "http://localhost:3000")
+//  public String removeById(@PathVariable Long id) {
+//
+//    trackService.removeById(id);
+//    return "redirect:/get-all";
+//  }
 
 
 

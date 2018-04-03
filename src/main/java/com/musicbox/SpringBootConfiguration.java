@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootConfiguration {
 
     public static void main(String[] args) {
+
         SpringApplication.run(SpringBootConfiguration.class);
+        System.out.println("server started");
     }
+
 
 }
