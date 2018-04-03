@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55fd273f-f232-436c-bffb-89784d63fdf6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/musicbox/service/TrackServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/801f2c89-0cc6-4345-adc7-22e1b63301ed.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/801f2c89-0cc6-4345-adc7-22e1b63301ed.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/83d196a5-c433-4982-9d65-b6ef8c61e07e.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/83d196a5-c433-4982-9d65-b6ef8c61e07e.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/musicbox/SpringBootConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/musicbox/SpringBootConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/musicbox/controller/TrackController.java" afterPath="$PROJECT_DIR$/src/main/java/com/musicbox/controller/TrackController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/musicbox/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/musicbox/controller/UserController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactt/package-lock.json" afterPath="$PROJECT_DIR$/src/main/reactt/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactt/package.json" afterPath="$PROJECT_DIR$/src/main/reactt/package.json" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/musicbox/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/musicbox/controller/UserController.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +51,8 @@
       <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/AlbumDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="229">
+              <caret line="44" column="73" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="73" />
               <folding>
                 <marker date="1522677590803" expanded="true" signature="881:941" ph="UPDATE albums... " />
                 <marker date="1522677590803" expanded="true" signature="1128:1178" ph="SELECT * FRO... albums" />
@@ -83,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/reactt/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -110,6 +101,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -144,24 +145,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Album.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/model/Album.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrackDaoImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TrackDaoImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="-221">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1522774655084" expanded="true" signature="683:704" ph="SELECT * FRO... tracks" />
+                <marker date="1522777110766" expanded="true" signature="606:656" ph="SELECT * FRO... tracks" />
+                <marker date="1522777110766" expanded="true" signature="885:906" ph="SELECT * FRO... tracks" />
               </folding>
             </state>
           </provider>
@@ -252,7 +244,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/src/main/reactt/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1378" />
     <option name="height" value="735" />
@@ -540,15 +532,15 @@
       <updated>1521897018506</updated>
       <workItem from="1521897027731" duration="100618000" />
       <workItem from="1522329476668" duration="39000" />
-      <workItem from="1522769409456" duration="5462000" />
+      <workItem from="1522769409456" duration="6646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112396000" />
+    <option name="totallyTimeSpent" value="113580000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -791,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/RoleDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -886,29 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1522774655084" expanded="true" signature="683:704" ph="SELECT * FRO... tracks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/AlbumDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <marker date="1522677590803" expanded="true" signature="881:941" ph="UPDATE albums... " />
-            <marker date="1522677590803" expanded="true" signature="1128:1178" ph="SELECT * FRO... albums" />
-            <marker date="1522677590803" expanded="true" signature="1444:1464" ph="SELECT * FRO... albums" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -925,6 +886,38 @@
           <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/AlbumDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="44" column="73" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="73" />
+          <folding>
+            <marker date="1522677590803" expanded="true" signature="881:941" ph="UPDATE albums... " />
+            <marker date="1522677590803" expanded="true" signature="1128:1178" ph="SELECT * FRO... albums" />
+            <marker date="1522677590803" expanded="true" signature="1444:1464" ph="SELECT * FRO... albums" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/musicbox/dao/TrackDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1522777110766" expanded="true" signature="606:656" ph="SELECT * FRO... tracks" />
+            <marker date="1522777110766" expanded="true" signature="885:906" ph="SELECT * FRO... tracks" />
           </folding>
         </state>
       </provider>

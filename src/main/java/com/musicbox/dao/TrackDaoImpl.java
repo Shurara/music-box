@@ -27,8 +27,10 @@ public class TrackDaoImpl implements TrackDao {
 
     @Override
     public Track getById(Long id) {
-
-        return null;
+        String sql = "SELECT * FROM tracks WHERE TRACK_ID IN(" + id + ")";
+        Query query = entityManager.createNativeQuery(sql, Track.class);
+        Track track = (Track)query.getSingleResult();
+        return track;
     }
 
     @Override
