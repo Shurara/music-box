@@ -1,7 +1,6 @@
 package com.musicbox.service;
 
 import com.musicbox.dao.TrackDao;
-import com.musicbox.dao.TrackDaoImpl;
 import com.musicbox.model.Track;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,12 +31,12 @@ public class TrackServiceImpl implements TrackService {
     }
 
     @Override
-    public void updateTracksById(Track track) {
+    public void updateTrackById(Track track) {
 
     }
 
     @Override
-    public void removeTrackById(Long id) {
+    public void removeById(Long id) {
 
     }
 

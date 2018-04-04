@@ -34,6 +34,26 @@ public class TrackController {
     return trackService.getById(id);
   }
 
+
+  @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+  @ResponseBody
+  @CrossOrigin(value = "http://localhost:*")
+  public void updateTrackById(@RequestBody Track track, @PathVariable Long id) {
+    track.setId(id);
+
+    trackService.updateTrackById(track);
+  }
+
+  @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+  @ResponseBody
+  @CrossOrigin(value = "http://localhost:3000")
+  public String removeById(@PathVariable Long id) {
+
+    trackService.removeById(id);
+    return "redirect:/get-all";
+  }
+
+
 //  @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
 //  @ResponseBody
 //  @CrossOrigin(value = "http://localhost:3000")

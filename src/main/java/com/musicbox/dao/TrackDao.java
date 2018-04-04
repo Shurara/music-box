@@ -9,6 +9,8 @@ public interface TrackDao {
 
     void addTrack(Track track);
 
+    void updateTrackById(Track track);
+
     void removeById(Long id);
 
     Track getById(Long id);

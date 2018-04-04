@@ -32,6 +32,7 @@ public class AlbumDaoImpl implements AlbumDao {
 
     }
 
+
     @Override
     public void removeCoverById(Long id) {
         String sql = "UPDATE albums SET COVER = null WHERE ALBUM_ID IN(" + id + ")";
