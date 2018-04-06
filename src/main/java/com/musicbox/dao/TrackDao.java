@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface TrackDao {
 
-    void addTrack(Track track);
+    void addTracks(Track track);
 
-    void updateTrackById(Track track);
+    void updateTrackById(Track track, Long id);
 
     void removeById(Long id);
 

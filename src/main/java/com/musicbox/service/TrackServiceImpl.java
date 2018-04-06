@@ -27,11 +27,13 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public void addTracks(Track track) {
+        trackDao.addTrack(track);
 
     }
 
     @Override
-    public void updateTrackById(Track track) {
+    public void updateTrackById(Track track, Long id) {
+        trackDao.updateTrackById(track, id);
 
     }
 

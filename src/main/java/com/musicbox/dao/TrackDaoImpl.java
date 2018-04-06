@@ -17,19 +17,23 @@ public class TrackDaoImpl implements TrackDao {
   EntityManager entityManager;
 
   @Override
-  public void addTrack(Track track) {
-
-  }
-
-
-
-  @Override
-  public void updateTrackById(Track track) {
+  @Transactional
+  public void addTracks(Track track) {
     String trackName = track.getTitle();
     String trackUrl = track.getUrl();
-    Long trackId = track.getId();
-    String sql = "UPDATE tracks SET TITLE = '" + trackName + "', URL = '" + trackUrl + "' WHERE ALBUM_ID IN(\"" + trackId + "\")";
-    Query query = entityManager.createNamedQuery(sql, Track.class);
+    String sql = "INSERT INTO tracks (TITLE, URL) VALUES ('" + trackName + "', '" + trackUrl + "')";
+    Query query = entityManager.createNativeQuery(sql, Track.class);
+    query.executeUpdate();
+  }
+
+  @Override
+  @Transactional
+  public void updateTrackById(Track track, Long id) {
+    String trackName = track.getTitle();
+    String trackUrl = track.getUrl();
+    Long trackId = id;
+    String sql = "UPDATE tracks SET TITLE = '" + trackName + "', URL = '" + trackUrl + "' WHERE TRACK_ID IN(" + trackId + ")";
+    Query query = entityManager.createNativeQuery(sql, Track.class);
     query.executeUpdate();
   }
 
