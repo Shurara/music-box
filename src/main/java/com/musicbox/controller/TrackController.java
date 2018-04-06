@@ -5,6 +5,7 @@ import com.musicbox.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +24,9 @@ public class TrackController {
 
     return trackService.getAll();
   }
+
+
+
 
     @RequestMapping(path = "/add-track", method = RequestMethod.POST)
 //  @ResponseBody
@@ -56,6 +60,7 @@ public class TrackController {
     trackService.removeById(id);
     return "redirect:/";
   }
+
     @RequestMapping(value = "/error", method = RequestMethod.GET)
     public ResponseEntity<String> testError() {
 

@@ -37,7 +37,7 @@ public class TrackDaoImpl implements TrackDao {
     query.executeUpdate();
   }
 
-  @Override
+    @Override
   @Transactional
   public void removeById(Long id) {
   Track track = entityManager.find(Track.class, id);

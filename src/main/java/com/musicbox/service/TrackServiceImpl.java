@@ -27,7 +27,7 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public void addTracks(Track track) {
-        trackDao.addTrack(track);
+        trackDao.addTracks(track);
 
     }
 
@@ -39,6 +39,7 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public void removeById(Long id) {
+        trackDao.removeById(id);
 
     }
 
