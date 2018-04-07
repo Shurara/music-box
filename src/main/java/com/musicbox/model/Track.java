@@ -1,6 +1,7 @@
 package com.musicbox.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class Track {
     @Column(name = "URL")
     private String url;
     @ManyToOne(fetch = FetchType.LAZY)
+//    @JsonProperty("album")
     @JoinColumn(name = "ALBUM_ID")
     private Album album;
 
@@ -47,6 +49,14 @@ public class Track {
     }
 
     public Track(){}
+
+    public Long getTrack_id() {
+        return track_id;
+    }
+
+    public Album getAlbum() {
+        return album;
+    }
 
     public Long getId() {
         return track_id;

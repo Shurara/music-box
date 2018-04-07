@@ -4,6 +4,7 @@ import com.musicbox.model.Track;
 import com.musicbox.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -25,13 +26,10 @@ public class TrackController {
     return trackService.getAll();
   }
 
-
-
-
     @RequestMapping(path = "/add-track", method = RequestMethod.POST)
-//  @ResponseBody
+//    @ResponseBody
 //  @CrossOrigin(value = "http://localhost:3000")
-    public void addTracks(Track track) {
+    public void addTracks(@RequestBody Track track) {
      trackService.addTracks(track);
 
     }
@@ -67,8 +65,6 @@ public class TrackController {
         return new ResponseEntity<>(TrackService.testError(), HttpStatus.OK);
     }
 
-
-
 //  @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
 //  @ResponseBody
 //  @CrossOrigin(value = "http://localhost:3000")
@@ -77,9 +73,5 @@ public class TrackController {
 //    trackService.removeById(id);
 //    return "redirect:/get-all";
 //  }
-
-
-
-
 
 }

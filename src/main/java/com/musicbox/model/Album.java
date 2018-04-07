@@ -53,4 +53,8 @@ public class Album {
     public void setCover(String cover) {
         this.cover = cover;
     }
+
+    public Long getAlbum_id() {
+        return album_id;
+    }
 }
