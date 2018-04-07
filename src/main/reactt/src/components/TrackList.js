@@ -1,39 +1,34 @@
 import React from 'react'
-export default class Profiles extends React.Component {
+export default class TrackList extends React.Component {
+
     constructor(params){
         super(params)
 
         this.state = {
-            albums: []
+            tracks: []
         }
     }
     componentDidMount(){
-        if (this.state.albums.length === 0) {
-            fetch('api/albums/get-all')
+        if (this.state.tracks.length === 0) {
+            fetch('/api/tracks/get-all')
                 .then(res => res.json())
                 .then(data => this.setState({albums: data}))
         }
     }
 
-    // render() {
-    //     return (<div>
-    //         <h2>There will be tracklist</h2>
-    //         {this.state.albums.map(album => <li>{album.id}</li>)}
-    //     </div>)
-    // }
 
-render() {
-    const albums = this.state.albums.map(album =>
-        <div key={album.id}className="album">
-            <header>{album.title}</header>
-            <img className="album__cover" src={album.cover}/>
-        </div>)
-    return (
+    render() {
+        const tracks = this.state.tracks.map(track =>
+            <div key={track.track_id}className="album">
+                <header>{track.title}</header>
+                <link>{track.url}</link>
+            </div>)
+        return (
 
-        <div>
-            <p>albums from db</p>
-            {albums}
-        </div>
-    )
-}
+            <div>
+                <p>tracks from db</p>
+                {tracks}
+            </div>
+        )
+    }
 }

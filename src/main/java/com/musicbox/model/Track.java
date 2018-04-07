@@ -1,5 +1,6 @@
 package com.musicbox.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -22,6 +23,7 @@ public class Track {
     private String url;
     @ManyToOne(fetch = FetchType.LAZY)
 //    @JsonProperty("album")
+    @JsonIgnoreProperties("tracks")
     @JoinColumn(name = "ALBUM_ID")
     private Album album;
 

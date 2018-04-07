@@ -1,47 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types'
+import React from 'react'
+export default class AlbumList extends React.Component {
 
-class AlbumList extends React.Component {
-
-    constructor(anyparams){
-        super(anyparams)
+    constructor(params){
+        super(params)
 
         this.state = {
             albums: []
         }
-
-        this.getAlbums();
     }
-
-
-
-    getAlbums (){
-        var self = this;
-        var request = new window.XMLHttpRequest();
-        request.open('GET', 'http://localhost:8080/api/albums/get-all', true);
-        // request.open('GET', '/api/albums/get-all', true);
-        request.onload = function() {
-            self.setState({albums:JSON.parse(request.responseText)});
-
+    componentDidMount(){
+        if (this.state.albums.length === 0) {
+            fetch('/api/albums/get-all')
+                .then(res => res.json())
+                .then(data => this.setState({albums: data}))
         }
-        request.send();
     }
-    redirectToTarget = id => {
-        window.location.href = "/home/" + id;
-    }
+
 
     render() {
         const albums = this.state.albums.map(album =>
-            <div key={album.id} className="album">
-            <header>{album.title}</header>
-            <img onClick={() => this.redirectToTarget(album.id)} className="album__cover" src={album.cover}/>
-        </div>)
+            <div key={album.album_id}className="album">
+                <header>{album.title}</header>
+                <img className="album_cover" src={album.cover}/>
+            </div>)
         return (
-            <div className="home">
+
+            <div>
+                <p>albums from db</p>
                 {albums}
             </div>
         )
     }
 }
-
-export default AlbumList;
