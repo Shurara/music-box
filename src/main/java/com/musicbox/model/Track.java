@@ -23,6 +23,14 @@ public class Track {
     @JoinColumn(name = "ALBUM_ID")
     private Album album;
 
+    public Long getTrack_id() {
+        return track_id;
+    }
+
+    public Album getAlbum() {
+        return album;
+    }
+
     @OneToMany(mappedBy = "track")
     private List<Like> likes = new ArrayList<>();
 
