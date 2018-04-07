@@ -12,16 +12,16 @@ export default class TrackList extends React.Component {
         if (this.state.tracks.length === 0) {
             fetch('/api/tracks/get-all')
                 .then(res => res.json())
-                .then(data => this.setState({albums: data}))
+                .then(data => this.setState({tracks: data}))
         }
     }
 
 
     render() {
         const tracks = this.state.tracks.map(track =>
-            <div key={track.track_id}className="album">
+            <div key={track.track_id} className="track">
                 <header>{track.title}</header>
-                <link>{track.url}</link>
+                <p>{track.url}</p>
             </div>)
         return (
 

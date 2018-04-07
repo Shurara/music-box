@@ -8,11 +8,18 @@ body {
   album: pointer;
 }
 
-.album__cover {
+.album_cover {
   cursor: pointer;
   height: 250px;
   width: 250px;
 }
 a{
   margin-right: 10px;
+}
+
+.album_box {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin:2%;
 }

@@ -19,9 +19,10 @@ export default class AlbumList extends React.Component {
 
     render() {
         const albums = this.state.albums.map(album =>
-            <div key={album.album_id}className="album">
-                <header>{album.title}</header>
+            <div key={album.album_id}className="album_box">
+                <p>{album.title}</p>
                 <img className="album_cover" src={album.cover}/>
+
             </div>)
         return (
 

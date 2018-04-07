@@ -1,14 +1,11 @@
 package com.musicbox.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "tracks")
@@ -16,15 +13,16 @@ public class Track {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("track_id")
     private Long track_id;
     @Column(name = "TITLE")
     private String title;
     @Column(name = "URL")
     private String url;
-    @ManyToOne(fetch = FetchType.LAZY)
-//    @JsonProperty("album")
-    @JsonIgnoreProperties("tracks")
+    @ManyToOne
+    @JsonProperty("album")
     @JoinColumn(name = "ALBUM_ID")
+    @JsonIgnoreProperties(value = "tracks", allowSetters = true)
     private Album album;
 
     @OneToMany(mappedBy = "track")
@@ -32,6 +30,10 @@ public class Track {
 
     public List<Like> getLikes() {
         return likes;
+    }
+
+    public Album getAlbum() {
+        return album;
     }
 
     public void setLikes(List<Like> likes) {
@@ -52,14 +54,6 @@ public class Track {
 
     public Track(){}
 
-    public Long getTrack_id() {
-        return track_id;
-    }
-
-    public Album getAlbum() {
-        return album;
-    }
-
     public Long getId() {
         return track_id;
     }
@@ -74,5 +68,16 @@ public class Track {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+            "track_id=" + track_id +
+            ", title='" + title + '\'' +
+            ", url='" + url + '\'' +
+            ", album=" + album +
+            ", likes=" + likes +
+            '}';
     }
 }
