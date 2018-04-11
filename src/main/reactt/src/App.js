@@ -19,9 +19,8 @@ class App extends React.Component {
               <SoundPlayer/>
               <Switch>
                   <Route exact path = "/" component ={AlbumList}/>
-                  <Route exact path = "/albums/:id" component ={TrackList}/>
-                  <Route exact path = "/favorites" component ={FavoriteTrackBox}/>
                   <Route exact path = "/albums" component ={AlbumList}/>
+                  <Route exact path = "/favorites" component ={FavoriteTrackBox}/>
                   <Route exact path = "/login" component ={LoginBox}/>
                   <Route exact path = "/tracklist" component ={TrackList}/>
                   <Route exact path="/adminbox" component ={AdminBox}/>

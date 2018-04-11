@@ -9,7 +9,7 @@
         <module name="sideProject_musicBox" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="sideProject_musicBox" target="1.8" />
     </bytecodeTargetLevel>
   </component>
