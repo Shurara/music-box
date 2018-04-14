@@ -1,0 +1,31 @@
+package com.musicbox.controller;
+
+
+import com.musicbox.model.Like;
+import com.musicbox.model.User;
+import com.musicbox.service.LikeService;
+import com.musicbox.service.TrackService;
+import com.musicbox.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api")
+public class LikeController {
+
+  @Autowired
+  private UserService userService;
+
+  @Autowired
+  private LikeService likeService;
+
+
+  @Transactional
+  @PostMapping(value = "/tracks/{track_id}/like")
+  public void addLike(@RequestBody Like like, @PathVariable Long track_id, Long user_id){
+
+   likeService.addLike(like, track_id, user_id);
+}
+
+}

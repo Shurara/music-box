@@ -73,11 +73,11 @@ public class Track {
     @Override
     public String toString() {
         return "Track{" +
-                "track_id=" + track_id +
-                ", title='" + title + '\'' +
-                ", url='" + url + '\'' +
-                ", album=" + album +
-                ", likes=" + likes +
-                '}';
+            "track_id=" + track_id +
+            ", title='" + title + '\'' +
+            ", url='" + url + '\'' +
+            ", album=" + album +
+            ", likes=" + likes +
+            '}';
     }
 }

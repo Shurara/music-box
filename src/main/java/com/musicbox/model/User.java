@@ -1,10 +1,13 @@
 package com.musicbox.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.musicbox.configuration.security.UserPrincipal;
+//import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.function.Function;
 
 @Entity
 @Table(name = "users")
@@ -12,9 +15,10 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("user_id")
     private Long user_id;
-    @Column(name = "ROLE_ID")
-    private Long role;
+    @Column(name = "ROLE")
+    private String role;
     @Column(name = "NAME")
     private String name;
     @Column(name = "LOGIN")
@@ -40,11 +44,11 @@ public class User {
         this.user_id = user_id;
     }
 
-    public Long getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Long role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
@@ -71,4 +75,14 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+//    public static Function<List<GrantedAuthority>, UserPrincipal> ofPrincipal(User user) {
+//        return a -> new UserPrincipal(
+//            user.getId(),
+//            user.getName(),
+//            user.getLogin(),
+//            user.getPassword(),
+//            a
+//        );
+//    }
 }
