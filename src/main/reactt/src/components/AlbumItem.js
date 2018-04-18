@@ -8,35 +8,37 @@ class AlbumItem extends React.Component {
 
         this.state = {
             album: {},
-            id: this.props.id,
             tracks: []
         }
         this.getAlbum()
     }
-    getAlbum() {
-        var self = this;
-        var request = new window.XMLHttpRequest();
-        request.open('GET', 'http://localhost:8080/api/albums/'+ self.state.id, true);
-        request.onload = function() {
-            self.setState({ album:JSON.parse(request.responseText)});
-            self.setState({ tracks:self.state.album.tracks.map(track => <li>{track.title}</li>)})
+    getAlbum = () => fetch('/api/albums/' +this.props.match.params.id,)
+        .then(res=>res.json())
+        .then((data) => this.setState({album: data}))
+        .then(() => this.setState({tracks:this.state.album.tracks.map(track =>
+                <div className='tracks' key={track.id}>
+                    <p className='track'>{track.title}</p>
 
-        }
-        request.send();
-    }
+                </div>)}))
+
+
     render() {
-
 
         return (
             <div className="album">
-                <header>{this.state.album.title}</header>
+                <h2>
+                    {this.state.album.title}
+                </h2>
                 <img className="album__cover" src={this.state.album.cover}/>
-                <ul>
+
+                <div>
                     {this.state.tracks}
-                </ul>
+                </div>
             </div>
         )
     }
+
 }
+
 
 export default AlbumItem;

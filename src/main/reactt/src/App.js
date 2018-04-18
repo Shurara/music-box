@@ -7,6 +7,8 @@ import FavoriteTrackBox from "./containers/FavoriteTracksBox";
 import LoginBox from "./containers/LoginBox";
 import TrackList from "./components/TrackList"
 import AdminBox from "./containers/AdminBox"
+import AlbumItem from "./components/AlbumItem"
+import Home from "./components/Home"
 
 
 
@@ -19,7 +21,10 @@ class App extends React.Component {
               <SoundPlayer/>
               <Switch>
                   <Route exact path = "/" component ={AlbumList}/>
+                  {/*<Route exact path = "/home" component ={Home}/>*/}
                   <Route exact path = "/albums" component ={AlbumList}/>
+                  <Route exact path="/albums/:id" component={AlbumItem} />
+                  {/*<Route exact path = "{`/albums/:id`}" component ={AlbumItem}/>*/}
                   <Route exact path = "/favorites" component ={FavoriteTrackBox}/>
                   <Route exact path = "/login" component ={LoginBox}/>
                   <Route exact path = "/tracklist" component ={TrackList}/>

@@ -8,8 +8,9 @@ class Navigation extends React.Component {
         return (
             <div>
                 <nav >
+                    <Link to="/home">Home</Link>
                     <Link to="/albums">Albums</Link>
-                    <Link to="/albums">Albums Tracks</Link>
+                    {/*<Link to="/albums/:{id}">Albums Tracks</Link>*/}
                     <Link to="/favorites">Favorite Tracks</Link>
                     <Link to="/adminbox">Admin Box</Link>
                     <Link to="/login">Login</Link>

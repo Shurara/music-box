@@ -12,3 +12,4 @@ export default class LoginBox extends React.Component {
         )
     }
 }
+

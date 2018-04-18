@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 export default class AlbumList extends React.Component {
 
     constructor(params){
@@ -20,9 +21,10 @@ export default class AlbumList extends React.Component {
     render() {
         const albums = this.state.albums.map(album =>
             <div key={album.album_id}className="album_box">
+                <Link to={"/albums/" + album.id}>
                 <p>{album.title}</p>
                 <img className="album_cover" src={album.cover}/>
-
+                </Link>
             </div>)
         return (
 

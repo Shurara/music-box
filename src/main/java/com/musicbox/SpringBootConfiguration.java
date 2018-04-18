@@ -16,7 +16,7 @@ public class SpringBootConfiguration {
     public static void main(String[] args) {
 
         SpringApplication.run(SpringBootConfiguration.class);
-        System.out.println("server started");
+
     }
     @Bean
     public CorsFilter corsFilter() {
