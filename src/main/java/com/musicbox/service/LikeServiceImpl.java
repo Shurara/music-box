@@ -39,7 +39,7 @@ public class LikeServiceImpl implements LikeService {
   }
 
   @Override
-  public List<Track> getByUser(User user) {
-    return null;
+  public List<Track>  getLikesByUser(User user) {
+    return likeDao.getLikesByUser(user);
   }
 }

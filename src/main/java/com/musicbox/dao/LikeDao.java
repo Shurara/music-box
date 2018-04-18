@@ -16,5 +16,5 @@ public interface LikeDao {
 
     List<Like> getAll();
 
-    List<Track>getByUser(User user);
+    List<Track>getLikesByUser(User user);
 }

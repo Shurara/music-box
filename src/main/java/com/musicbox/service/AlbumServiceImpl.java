@@ -31,6 +31,7 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     public Album getById(Long id) {
+
         return albumDao.getById(id);
     }
 

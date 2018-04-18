@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 
@@ -46,7 +47,11 @@ public class LikeDaoImpl implements LikeDao{
     }
 
     @Override
-    public List<Track> getByUser(User user) {
-        return null;
+    public List<Track> getLikesByUser(User user) {
+        Query query = entityManager.createNativeQuery(
+            "SELECT t.* FROM tracks t INNER JOIN likes l on t.TRACK_ID = l.SONG_ID INNER JOIN users u ON  u.USER_ID = l.USER_ID WHERE u.USER_ID = 5", Track.class);
+        List<Track> list = (List<Track>) query.getResultList();
+        return list;
+
     }
 }
