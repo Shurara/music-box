@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface LikeService {
 
-  void addLike(Like like, Long track_id, Long user_id);
+  void addLike(Like like, Long track_id);
 
   void removeById(Long id);
 

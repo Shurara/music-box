@@ -18,8 +18,8 @@ public class LikeServiceImpl implements LikeService {
 
 
   @Override
-  public void addLike(Like like, Long track_id, Long user_id) {
-    likeDao.addLike(like, track_id, user_id);
+  public void addLike(Like like, Long track_id) {
+    likeDao.addLike(like, track_id);
 
   }
 

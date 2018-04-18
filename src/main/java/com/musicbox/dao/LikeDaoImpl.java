@@ -20,20 +20,18 @@ public class LikeDaoImpl implements LikeDao{
 
 
     @Override
-    public void addLike(Like like, Long track_id, long user_id) {
-        user_id = 5;
+    public void addLike(Like like, Long track_id) {
+
         Track track = entityManager.find(Track.class, track_id);
-        User user = entityManager.find(User.class, user_id);
         like.setTrack(track);
-        like.setUser(user);
         entityManager.persist(like);
 
     }
 
     @Override
     public void removeById(Long id, Like like) {
-//        Track track = entityManager.find(Track.class,id);
-//        entityManager.remove(like);
+        Track track = entityManager.find(Track.class,id);
+        entityManager.remove(like);
 
     }
 

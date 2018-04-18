@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface LikeDao {
 
-    void addLike(Like like, Long track_id, long user_id);
+    void addLike(Like like, Long track_id);
 
     void removeById(Long id, Like like);
 

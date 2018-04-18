@@ -23,9 +23,9 @@ public class LikeController {
 
   @Transactional
   @PostMapping(value = "/tracks/{track_id}/like")
-  public void addLike(@RequestBody Like like, @PathVariable Long track_id, Long user_id){
+  public void addLike(@RequestBody Like like, @PathVariable Long track_id){
 
-   likeService.addLike(like, track_id, user_id);
+   likeService.addLike(like, track_id);
 }
 
 }

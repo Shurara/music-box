@@ -8,7 +8,6 @@ import LoginBox from "./containers/LoginBox";
 import TrackList from "./components/TrackList"
 import AdminBox from "./containers/AdminBox"
 import AlbumItem from "./components/AlbumItem"
-import Home from "./components/Home"
 
 
 

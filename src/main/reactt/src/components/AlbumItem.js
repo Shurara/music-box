@@ -12,7 +12,7 @@ class AlbumItem extends React.Component {
         }
         this.getAlbum()
     }
-    getAlbum = () => fetch('/api/albums/' +this.props.match.params.id,)
+    getAlbum = () => fetch('/api/albums/' + this.props.match.params.id,)
         .then(res=>res.json())
         .then((data) => this.setState({album: data}))
         .then(() => this.setState({tracks:this.state.album.tracks.map(track =>
