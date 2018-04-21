@@ -20,19 +20,27 @@ export default class Liked extends React.Component {
 
     render() {
         const tracks = this.state.likedTracks.map(track =>
-            <div key={track.id}>
 
-                <div className="track-title">
-                    <p>{track.title}</p>
-                </div>
-            </div>)
+                <li key={track.id} className="list-group-item">
+                    {track.title}
+                    <button type="button" className="btn btn-secondary track__play__button">Play</button>
+                    </li>
+        )
+
         return (
-
-            <div className="track-liked">
-                {tracks}
+            <div className="thumbnail album__container" >
+                <ul className="list-group list-group-flush">
+                    {tracks}
+                </ul>
             </div>
+
+
         )
 
 
     }
 }
+
+{/*<li key={track.id} className="list-group-item">{track.title}*/}
+    {/*<button type="button" className="btn btn-secondary track__play__button">Play</button>*/}
+{/*</li>*/}
