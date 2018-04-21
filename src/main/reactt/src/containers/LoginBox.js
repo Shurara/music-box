@@ -6,7 +6,7 @@ export default class LoginBox extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="loginbox">
                 <p>There will Login form</p>
             </div>
         )

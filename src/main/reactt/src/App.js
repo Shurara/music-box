@@ -17,7 +17,6 @@ class App extends React.Component {
       return (
           <div>
               <Navigation />
-              <SoundPlayer/>
               <Switch>
                   <Route exact path = "/" component ={AlbumList}/>
                   {/*<Route exact path = "/home" component ={Home}/>*/}

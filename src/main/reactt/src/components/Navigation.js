@@ -6,13 +6,14 @@ class Navigation extends React.Component {
     render() {
 
         return (
-            <div>
-                <nav >
+            <div className="navigation">
+                <nav>
                     <Link to="/albums">Albums</Link>
                     <Link to="/favorites">Favorite Tracks</Link>
+
                     <Link to="/adminbox">Admin Box</Link>
                     <Link to="/login">Login</Link>
-                    <Link to="/tracklist">Tracklist</Link>
+                    {/*<Link to="/tracklist">Tracklist</Link>*/}
                 </nav>
 
             </div>
