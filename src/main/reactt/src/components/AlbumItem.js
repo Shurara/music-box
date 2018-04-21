@@ -16,9 +16,9 @@ class AlbumItem extends React.Component {
         .then(res=>res.json())
         .then((data) => this.setState({album: data}))
         .then(() => this.setState({tracks:this.state.album.tracks.map(track =>
-            // key={track.id}
-            <li class="list-group-item">{track.title}
-                <button type="button" class="btn btn-secondary track__play__button">Play</button>
+            //
+            <li key={track.id} className="list-group-item">{track.title}
+                <button type="button" className="btn btn-secondary track__play__button">Play</button>
             </li>
         )}))
 
@@ -26,10 +26,10 @@ class AlbumItem extends React.Component {
     render() {
 
         return (
-            <div className="thumbnail album__container">
+            <div className="thumbnail album__container" >
                 <h4 className="text-center"> {this.state.album.title}</h4>
                 <img  src={this.state.album.cover} className="img-responsive cover__album__tracks"/>
-                <ul class="list-group list-group-flush">
+                <ul className="list-group list-group-flush">
                     {this.state.tracks}
                 </ul>
 
