@@ -1,4 +1,5 @@
 import React from 'react'
+import Likes from "../components/Liked";
 
 
 export default class FavoriteTracksBox extends React.Component {
@@ -7,7 +8,7 @@ export default class FavoriteTracksBox extends React.Component {
     render() {
         return (
             <div>
-                <p>There will Favorite tracks</p>
+                <Likes/>
             </div>
         )
     }

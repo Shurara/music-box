@@ -25,13 +25,13 @@ class AlbumItem extends React.Component {
     render() {
 
         return (
-            <div className="album">
+            <div className="album__item">
                 <h2>
                     {this.state.album.title}
                 </h2>
-                <img className="album__cover" src={this.state.album.cover}/>
+                <img className="album_cover" src={this.state.album.cover}/>
 
-                <div>
+                <div className="track_item">
                     {this.state.tracks}
                 </div>
             </div>
