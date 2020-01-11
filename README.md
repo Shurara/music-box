@@ -13,6 +13,8 @@ Mysql should be used as a database solution.
 Communication between backend and frontend should be implemented according to REST principles.
 The frontend should be implemented in JavaScript with React, Redux, Bootstrap libraries.
 Album covers and audio files should be stored to file system.
+
+
 Tasks
 In a team, we have 2 members. Let's say member L and member R.
 Here is a task for member L:
